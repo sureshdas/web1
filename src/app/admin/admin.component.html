@@ -1,0 +1,8 @@
+<div class="menu text-right" appMenuClick>
+  <a [ngClass]="{'menu-active':menuPath =='#/admin/home'}" href="#/admin/home">Home</a>
+  <a [ngClass]="{'menu-active':menuPath =='#/admin/vendor'}"href="#/admin/vendor">Create Vendor</a>
+  <a [ngClass]="{'menu-active':menuPath =='#/admin/vendorList'}"href="#/admin/vendor" href="#/admin/vendorList">Vers List</a>
+  <a [ngClass]="{'menu-active':menuPath =='#/admin/cpwd'}"href="#/admin/vendor" href="#/admin/cpwd">Change Pwd</a>
+  <a href="" (click)="fnLogout()">Logout</a>
+</div>
+<router-outlet></router-outlet>

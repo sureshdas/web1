@@ -1,0 +1,54 @@
+<mat-card id="login-card">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 text-right lbl-line-height">
+            <b>Product Name:</b>
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field >
+                <input matInput placeholder="Product Name" [(ngModel)]="postData.productName">
+              </mat-form-field>
+        </div>
+      </div>
+    </div>
+  
+  
+
+    <div class="form-group">
+        <div class="row">
+          <div class="col-sm-6 text-right lbl-line-height">
+              <b>Cost:</b>
+          </div>
+          <div class="col-sm-6">
+              <mat-form-field >
+                  <input matInput  placeholder="cost" [(ngModel)]="postData.productCost">
+                </mat-form-field>
+          </div>
+        </div>
+    </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6 text-right lbl-line-height">
+                    <b>Upload:</b>
+                </div>
+                <div class="col-sm-6">
+                        <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+                </div>
+              </div>
+        </div>
+        <div class="form-group" *ngIf="isEdit">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <img width="200px" height="200px" src="http://localhost:2020/images/{{postData._id}}.jpg?{{dateTime}}"/>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+              <div class="offset-6 col-sm-6">
+                 <input *ngIf='!isEdit' type="button" class="btn btn-primary" (click)="fnAddProduct()" value="Add Product"/>
+                 <input *ngIf='isEdit' type="button" class="btn btn-primary" (click)="fnEditProduct()" value="Edit"/>
+                </div>
+            </div>
+          </div>
+  </mat-card>

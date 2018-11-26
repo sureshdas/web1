@@ -1,0 +1,23 @@
+<mat-card id="login-card" *ngIf="isShow"> 
+<div class="form-group">
+  <div class='row'>
+     <div class='col-sm-7'>
+        <img width="400px" height="400px" src="http://localhost:2020/images/{{productDet._id}}.jpg?{{dateTime}}"/>
+     </div>
+     <div class='col-sm-5'>
+          <h1>{{productDet.productName}}</h1>
+          <h3>{{productDet.productCost}}</h3>
+        </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+       <input type="button" class="btn btn-primary" (click)="fnBuyNow()" value="BUY NOW"/>
+       <input type="button" (click)="fnAddToCart()" class="btn btn-primary" value="Add To Card"/>
+      </div>
+  </div>
+</div>
+</mat-card>
+

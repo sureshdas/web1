@@ -1,0 +1,14 @@
+<mat-card class="view-product-card" *ngFor="let pObj of cartProducts">
+    <div class="row">
+        <div class="col-sm-4">
+           <img width="100px" height="100px" src="http://localhost:2020/images/{{pObj._id}}.jpg?{{dateTime}}"/>
+        </div>
+        <div class="col-sm-8">
+           <p>{{pObj.productName}}</p>
+           <p><b>{{pObj.productCost}}</b></p>
+           <p><input type="button"  value="remove" (click)="fnRemoveCart(pObj)"/></p>
+           <p><input type="button"  value="buy now" (click)="fnBuyNow(pObj)"/></p>
+           
+        </div>
+    </div>
+ </mat-card>

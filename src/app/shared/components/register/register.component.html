@@ -1,0 +1,63 @@
+<mat-card id="login-card">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-6 text-right lbl-line-height">
+          <b>User Name:</b>
+      </div>
+      <div class="col-sm-6">
+          <mat-form-field >
+              <input matInput placeholder="User Name" [(ngModel)]="postData.userName">
+            </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 text-right lbl-line-height">
+            <b>Password:</b>
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field >
+                <input matInput type="password" placeholder="Password" [(ngModel)]="postData.password">
+              </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 text-right lbl-line-height">
+            <b>Phone:</b>
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field >
+                <input matInput placeholder="Phone" [(ngModel)]="postData.phone">
+              </mat-form-field>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+        <div class="row">
+          <div class="col-sm-6 text-right lbl-line-height">
+              <b>Email:</b>
+          </div>
+          <div class="col-sm-6">
+              <mat-form-field >
+                  <input matInput type="text" placeholder="Email" [(ngModel)]="postData.email">
+                </mat-form-field>
+          </div>
+        </div>
+      </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="offset-6 col-sm-6">
+         <input *ngIf="isSave" type="button" class="btn btn-primary" (click)="fnRegister()" value="Register"/>
+         <input *ngIf="!isSave" type="button" class="btn btn-primary" (click)="fnEdit()" value="Edit"/>
+         
+        </div>
+    </div>
+  </div>
+
+</mat-card>

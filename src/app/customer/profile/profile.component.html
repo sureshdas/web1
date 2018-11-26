@@ -1,0 +1,14 @@
+<mat-card class="view-product-card">
+    <p><span>User Name: </span><b>{{userInfo.userName}}</b></p>
+    <div *ngIf="!isEdit">
+        <p><span>Email: </span><b>{{userInfo.email}}</b></p>
+        <p><span>Phone: </span><b>{{userInfo.phone}}</b></p>
+    </div>
+    <a *ngIf="!isEdit" (click)="isEdit=!isEdit">click here to edit</a>
+    <div  *ngIf="isEdit">
+      <input type="text" [(ngModel)]="userInfo.email"/>
+      <input type="text" [(ngModel)]="userInfo.phone"/>
+      <input type="button" value="update" (click)="fnUPdate()"/>
+      <input type="button" value="cancel" (click)="isEdit=!isEdit"/>
+    </div>
+</mat-card>

@@ -1,0 +1,15 @@
+
+<mat-card class="view-product-card" *ngFor="let pObj of orders">
+    <div class="row">
+        <div class="col-sm-4">
+           <img width="100px" height="100px" src="http://localhost:2020/images/{{pObj._id}}.jpg?{{dateTime}}"/>
+        </div>
+        <div class="col-sm-8">
+           <p>{{pObj.productName}}</p>
+           <p><b>{{pObj.productCost}}</b></p>
+        </div>
+    </div>
+ </mat-card>
+ <p class="text-center text-danger" *ngIf='orders.length == 0'>
+      <b>No previous orders found</b>
+ </p>

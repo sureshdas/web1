@@ -1,0 +1,8 @@
+.menu{
+    line-height: 30px;
+    background: aliceblue;
+}
+
+.menu > a{
+    margin-right: 10px;
+}

@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.lbl-line-height{
+    line-height: 60px;
+}
+.body{
+    margin: 0
+}
+
+.menu-active{
+    color: red;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#loader{
+    position: fixed;
+    top: 0;
+    opacity: 0;
+}
+
+.loading{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5 !important;
+    background: black;
+    color: white;
+   
+}
+
+.menu{
+    line-height: 30px;
+    background: aliceblue;
+}
+
+.menu > a{
+    margin-right: 10px;
+}
+
+
+#login-card{
+    margin: 50px;
+}
+.view-product-card{
+    margin:10px;
+    cursor: pointer;
+}

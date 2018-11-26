@@ -1,0 +1,11 @@
+<button class="cust-menu" mat-button [matMenuTriggerFor]="menu">{{userName}}</button>
+<mat-menu #menu="matMenu">
+  <a mat-menu-item routerLink="/customer/home" routerLinkActive="menu-active">HOME</a>
+  <a mat-menu-item routerLink="/customer/products" routerLinkActive="menu-active">PRODUCTS</a>
+  <a mat-menu-item routerLink="/customer/orders" routerLinkActive="menu-active">ORDERS</a>
+  <a mat-menu-item routerLink="/customer/cart" routerLinkActive="menu-active">CART</a>
+  <a mat-menu-item routerLink="/customer/profile" routerLinkActive="menu-active">PROFILE</a>
+  <a mat-menu-item routerLink="/customer/cpwd" routerLinkActive="menu-active">ChangePWD</a>
+  <a mat-menu-item (click)="fnLogout()" >LOGOUT</a>
+</mat-menu>
+<router-outlet></router-outlet>
